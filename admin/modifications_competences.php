@@ -29,42 +29,6 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 	header('location:index.php');
 }
 			
-
-			
-		
- ?>
-
-<?php
- session_start(); // à mettre dans toutes les pages SESSION et identifications
-// faire ensuite le require si on veut sur toutes les pages admin
-if(isset($_SESSION['connexion']) && $_SESSION['connexion']=='connecté'){ // on envoie le formulaire avec le name du boutton, connexion on a cliqué sur le boutton
-
-	$id_utilisateur = $_SESSION['id_utilisateur'];
-	$prenom = $_SESSION['prenom'];
-	$nom = $_SESSION['nom'];
-	echo $_SESSION['connexion'];
-
-}else{
-	header('location:connexion.php');
-}
-
-// pour se deconnecter
-if (isset($_GET['deconnect'])) { // on vide les variables de session
- 
-	$_SESSION['connexion']='';
-	$_SESSION['id_utilisateur']='';
-	$_SESSION['prenom']='';
-	$_SESSION['nom']='';
-
-	unset($_SESSION['connexion']); // on supprime cette variable
-
-	session_destroy();
-	
-	header('location:index.php');
-}
-			
-
-			
 		
  ?>
 
@@ -99,7 +63,7 @@ if($_POST){
 <meta charset "utf-8">
 
 	<title></title>
-	<script src="../ckeditor/ckeditor.js"></script>
+	<!-- <script src="../ckeditor/ckeditor.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
@@ -115,7 +79,7 @@ if($_POST){
 				<td>Modification d'une compétence</td>	
 				<td>	
 				<textarea id="editor1"> name="competence" size="50" required ><?php echo $ligne_competence['competence']; ?></textarea>
-				<script>CKEDITOR.replace( 'editor1' ); </script>
+				<!-- <script>CKEDITOR.replace( 'editor1' ); </script> -->
 
 				<input type="text" name="niveau_c" size="50" required value="<?php echo $ligne_competence['niveau_c']; ?>" >
 

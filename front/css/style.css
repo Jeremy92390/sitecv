@@ -1,0 +1,15 @@
+header {
+	background-color: #990000;
+}
+ 
+ section.success {
+ 	background-color: #990000;
+ }
+
+ section {
+ 	padding: 50px 0;
+ }
+
+.nav navbar-nav navbar-right:hover {
+	color: #990000;
+}

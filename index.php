@@ -1,4 +1,39 @@
 <!DOCTYPE html>
+<?php require 'connexion/connexion.php' ?>
+<?php 
+    $sql = $pdoCV -> query("SELECT * FROM utilisateur");
+    $utilisateur = $sql -> fetch();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_competences");
+    $t_competences = $sql -> fetchAll();    
+
+    $sql = $pdoCV -> query("SELECT * FROM t_experiences");
+    $t_experiences = $sql -> fetchAll();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_formation");
+    $t_formation = $sql -> fetchAll();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_loisirs");
+    $t_loisirs = $sql -> fetchAll();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_portfolio");
+    $t_portfolio = $sql -> fetchAll();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_realisations");
+    $t_realisations = $sql -> fetchAll();
+
+    $sql = $pdoCV -> query("SELECT * FROM t_titre");
+    $t_titre = $sql -> fetchAll();
+
+   /* print_r($utilisateur);
+    print_r($t_competences);
+    print_r($t_experiences);
+    print_r($t_formation);
+    print_r($t_loisirs);
+    print_r($t_realisations);
+    print_r($t_titre);*/
+
+?>
 <html lang="en">
 
 <head>
@@ -16,6 +51,7 @@
 
     <!-- Theme CSS -->
     <link href="front/css/freelancer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="front/css/style.css">
 
     <!-- Custom Fonts -->
     <link href="front/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +77,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top"><?php echo $utilisateur['prenom'] . ' ' . $utilisateur['nom']; ?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,13 +87,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#portfolio">Compétences</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about">A propos de</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">Me contacter</a>
                     </li>
                 </ul>
             </div>
@@ -68,14 +104,18 @@
 
     <!-- Header -->
     <header>
+    <?php 
+    $sql = $pdoCV -> query("SELECT * FROM utilisateur");
+    $utilisateur = $sql -> fetch();
+     ?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <img class="img-responsive" src="front/img/profile.png" alt="">
                     <div class="intro-text">
-                        <span class="name">Start Bootstrap</span>
+                        <span class="name"><?php echo $utilisateur['prenom']. ' ' . $utilisateur['nom']; ?></span>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        <span class="skills"><?php echo $t_titre[0]['titre_cv']; ?></span>
                     </div>
                 </div>
             </div>
@@ -87,90 +127,56 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/cabin.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="front/img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
+                    <h2>Compétences</h2>
+                    <hr class="star-light">
+                    <span class="skills">
+                        <?php $i = 0;
+                        while ($i < count($t_competences)) {
+                             if ($i > 0) {echo ' / ';}
+                                 echo '<p>'. $t_competences[$i]['competence'] . ' - ' . $t_competences[$i]['niveau_c'] . '</p>';
+                             $i++;
+                         } 
+                         ?>
+                    </span>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
+    <!-- Experiences section -->
+    <section id="portfolio" class="success">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Expériences</h2>
+                    <hr class="star-light">
+                    <span class="skills">
+                        <?php $i = 0;
+                        while ($i < count($t_experiences)) {
+                             if ($i > 0) {echo ' / ';}
+                                 echo '<p>'. $t_experiences[$i]['titre_e'] . ' - ' . $t_experiences[$i]['sous_titre_e'] . '  ' . $t_experiences[$i]['dates_e'] . '  ' . $t_experiences[$i]['description_e']  . '</p>';
+                             $i++;
+                           } 
+                        ?>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>A propos de</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p><?php echo 'Je m\'appelle '. $utilisateur['prenom'] . ' ' . $utilisateur['nom'] . ', ' . 'J\'ai' . ' ' . $utilisateur['age'] . ' ans et je suis ' . ' ' . $t_titre[0]['titre_cv'] . ' .' ;?></p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p></p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -182,11 +188,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="success">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Me contacter</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -197,29 +203,29 @@
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                <label>Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <label>Adresse mail</label>
+                                <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <label>Numéro de téléphone</label>
+                                <input type="tel" class="form-control" placeholder="06/07........" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -227,7 +233,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
                             </div>
                         </div>
                     </form>
@@ -242,12 +248,12 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
+                        <h3>Ou me trouver?</h3>
+                        <p><?php echo $utilisateur['adresse'] . ' </br> ' . $utilisateur['code_postale']. ' ' . $utilisateur['ville']; ?> 
+                        </p>                     
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
+                        <h3>Réseaux Sociaux</h3>
                         <ul class="list-inline">
                             <li>
                                 <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -267,8 +273,8 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>A propos du freelance</h3>
+                        <p>Freelance est un libre d'utiliser, open source Bootstrap thème créé par <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
                 </div>
             </div>

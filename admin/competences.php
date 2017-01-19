@@ -95,7 +95,7 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 							<td>Compétence</td>
 							<td><textarea id="editor1" name="competence" id="competence" size="50" required></textarea></td>
 						</tr><br>
-						<script>CKEDITOR.replace( 'editor1' ); </script>
+						<!-- <script>CKEDITOR.replace( 'editor1' ); </script> -->
 						
 						<tr>
 							<td>Niveau</td>
@@ -117,7 +117,7 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 					</thead>
 					<tr>
 						<?php $sql = $pdoCV->query("SELECT * FROM t_competences");
-						$ligne = $sql->fetch();
+						//$ligne = $sql->fetch(); !! Fetch: réserve ou supprime une donnée du jeu de données !!
 						 while ($ligne = $sql->fetch()) { ?>
 						<td><?php echo $ligne['competence']; ?></td>
 						<td><?php echo $ligne['niveau_c']; ?></td>	
