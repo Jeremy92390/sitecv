@@ -44,7 +44,7 @@ $t_titre = $sql -> fetchAll();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Jérémy Telga CV</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@ $t_titre = $sql -> fetchAll();
     <link href="front/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet"> 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -109,6 +109,7 @@ $t_titre = $sql -> fetchAll();
 
 <!-- Header -->
 <header>
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png/jpg"></div>
 <?php 
 $sql = $pdoCV -> query("SELECT * FROM utilisateur");
 $utilisateur = $sql -> fetch();
@@ -118,7 +119,7 @@ $utilisateur = $sql -> fetch();
                     <div class="col-lg-12">
                         <div class="intro-text">
                             <span class="name"><?php echo $utilisateur['prenom']. ' ' . $utilisateur['nom']; ?></span>
-                            <hr class="star-light">
+                            <hr class="star-light1">
                             <span class="skills"><?php echo $t_titre[0]['titre_cv']; ?></span>
                         </div>
                     </div>
@@ -134,13 +135,36 @@ $utilisateur = $sql -> fetch();
                         <h2>Compétences</h2>
                         <hr class="star-light">
                         <span class="skills">
-                            <?php $i = 0;
-                            while ($i < count($t_competences)) {
-                               if ($i > 0) {echo ' / ';}
-                               echo '<p>'. $t_competences[$i]['competence'] . ' - ' . $t_competences[$i]['niveau_c'] . '</p>';
-                               $i++;
-                           } 
-                           ?>
+                           <label for="bar">HTML</label>
+                            <div class="progress">
+                              <div class="progress-bar-danger" role="progressbar"
+                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
+                              </div>
+                            </div>
+                            <label for="bar">CSS</label>
+                            <div class="progress">
+                              <div class="progress-bar-danger" role="progressbar"
+                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
+                              </div>
+                            </div>
+                            <label for="bar">PHP</label>
+                            <div class="progress">
+                              <div class="progress-bar-danger" role="progressbar"
+                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
+                              </div>
+                            </div>
+                            <label for="bar">Javascript</label>
+                            <div class="progress">
+                              <div class="progress-bar-danger" role="progressbar"
+                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
+                              </div>
+                            </div>
+                            <label for="bar">Bootstrap</label>
+                            <div class="progress">
+                              <div class="progress-bar-danger" role="progressbar"
+                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
+                              </div>
+                            </div>
                        </span>
                    </div>
                </div>
@@ -156,8 +180,8 @@ $utilisateur = $sql -> fetch();
                     <span class="skills">
                         <?php $i = 0;
                         while ($i < count($t_experiences)) {
-                           if ($i > 0) {echo ' / ';}
-                           echo '<p>'. $t_experiences[$i]['titre_e'] . ' - ' . $t_experiences[$i]['sous_titre_e'] . '  ' . $t_experiences[$i]['dates_e'] . '  ' . $t_experiences[$i]['description_e']  . '</p>';
+                           if ($i > 0) {}
+                           echo '<div class="col-md-3"><p><b>'. $t_experiences[$i]['titre_e'] . ' </b></p> ' . '<p>' . $t_experiences[$i]['sous_titre_e'] . ' </p> ' . '<p><b>' . $t_experiences[$i]['dates_e'] . ' </b></p> ' . '<p>' .  $t_experiences[$i]['description_e']  . '</p><hr/></div>';
                            $i++;
                        } 
                        ?>
@@ -176,16 +200,11 @@ $utilisateur = $sql -> fetch();
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
+            <div class="col-lg-12 ">
                 <p><?php echo 'Je m\'appelle '. $utilisateur['prenom'] . ' ' . $utilisateur['nom'] . ', ' . 'J\'ai' . ' ' . $utilisateur['age'] . ' ans et je suis ' . ' ' . $t_titre[0]['titre_cv'] . ' .' ;?></p>
             </div>
             <div class="col-lg-4">
                 <p></p>
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-download"></i> Download Theme
-                </a>
             </div>
         </div>
     </div>
@@ -197,7 +216,7 @@ $utilisateur = $sql -> fetch();
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2>Me contacter</h2>
-                <hr class="star-primary">
+                <hr class="star-light">
             </div>
         </div>
         <div class="row">
@@ -255,6 +274,7 @@ $utilisateur = $sql -> fetch();
                     <h3>Ou me trouver?</h3>
                     <p><?php echo $utilisateur['adresse']; ?></p> 
                     <p><?php echo $utilisateur['code_postale']. ' ' . $utilisateur['ville']; ?></p>                                           
+                    <p><?php echo $utilisateur['email']; ?></p>                                           
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>Réseaux Sociaux</h3>
@@ -287,7 +307,7 @@ $utilisateur = $sql -> fetch();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Your Website 2016
+                    Copyright &copy; TelgaCorp 2017
                 </div>
             </div>
         </div>
@@ -527,6 +547,8 @@ $utilisateur = $sql -> fetch();
 
 <!-- jQuery -->
 <script src="front/vendor/jquery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/path/to/parallax.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="front/vendor/bootstrap/js/bootstrap.min.js"></script>
