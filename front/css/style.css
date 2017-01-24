@@ -3,11 +3,12 @@ body {
 }
 
 header {
-	background: url('../../img/red.png') no-repeat;
+	background-image: none;
 	background-size: cover;
 	color: orange;
+	background-color: transparent;
 }
- 
+
  section.success {
  	background-color: #A5111C;
  }
@@ -23,6 +24,7 @@ header {
 .btn-success {
     color: #fff;
     background-color: #BE0032;
+    background-color: #A5111C;
     border-color: #A5111C;
     font-weight: 700;
 }
@@ -41,6 +43,15 @@ a, a.active, a:active, a:focus, a:hover {
 }
 .navbar-custom {
     background: #220007;
+}
+
+hr.star-light::after {
+    color: black;
+    background-color: grey;
+}
+
+.navbar-custom {
+    background: grey;
     font-weight: 700;
     border: none;
 }
@@ -53,16 +64,30 @@ header .intro-text .name {
 	font-family: 'Electrolize', sans-serif;
 	font-size: 80px;
 	color: white;
-	text-shadow: 10px 5px 5px black;
+	text-shadow: 15px 15px 8px rgba(0,0,0,0.75);
+	font-size: 80px;
 }
 
+#experiences {
+	background-color: transparent;
+	background-image: none;
+}
+
+#contact {
+	background-color: transparent;
+	background-image: none;
+}
 
 .intro-text {
 	font-family: 'Electrolize', sans-serif;
 	font-size: 40px;
 	color: white;
 }
-
+.skills .col-md-3 {
+    height: 303px;
+    padding-bottom: 38px;
+    margin-bottom: 43px;
+}
 .navbar-custom .navbar-nav li a:hover {
 	color: #AF002A;
 }
@@ -99,6 +124,11 @@ h3 {
 	font-family: 'Electrolize', sans-serif;
 }
 
+.h3, h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
 li a, header {
     font-family: 'Electrolize', sans-serif;
 }
@@ -116,7 +146,85 @@ hr.star-primary::after {
     color: black;
 }
 
+input::-moz-placeholder { 
+	color: white; 
+}
+
 .parallax-window {
     min-height: 400px;
     background: transparent;
 }
+
+#formulaire {
+	padding: 15px;
+	background: snow;
+	border-radius: 5px;
+	border: 2px solid black;
+	box-shadow: 15px 15px 8px rgba(0,0,0,0.5);
+}
+
+#formulaire input {
+	height: 40px;
+}
+
+#portfolio {
+	background: white;
+}
+
+ /*Button*/
+
+ .button {
+    width: 200px;
+    margin: 150px auto;
+}
+
+.button a {
+    display: block;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font: 17px/50px 'Electrolize', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background: #808080; 
+}
+
+.button p {
+    background: #A5111C;
+    display: block;
+    height: 40px;
+    width: 180px;
+    margin: -50px 0 0 10px;
+    text-align: center;
+    font: 14px/45px 'Electrolize', sans-serif;
+    color: #eee;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -moz-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -o-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -ms-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+
+.button a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.button:hover .bottom { 
+	margin: -10px 0 0 10px 
+}
+
+.button:hover .top {
+    margin: -80px 0 0 10px;
+    line-height: 35px;
+}
+
+/* Fin de button */

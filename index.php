@@ -34,86 +34,86 @@ $t_titre = $sql -> fetchAll();
     print_r($t_titre);*/
 
     ?>
-    <html lang="en">
+    <html lang="fr">
 
     <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Jérémy Telga CV</title>
+        <title>Jérémy Telga CV</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+        <!-- Bootstrap Core CSS -->
+        <link href="front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
 
-    <!-- Theme CSS -->
-    <link href="front/css/freelancer.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="front/css/style.css">
+        <!-- Theme CSS -->
+        <link href="front/css/freelancer.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="front/css/style.css">
 
-    <!-- Custom Fonts -->
-    <link href="front/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet"> 
+        <!-- Custom Fonts -->
+        <link href="front/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet"> 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    </head>
+</head>
 
-    <body id="page-top" class="index">
+<body id="page-top" class="index">
 
-        <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="#page-top"><?php echo $utilisateur['prenom'] . ' ' . $utilisateur['nom']; ?></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#portfolio">Compétences</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#experiences">Experiences</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#about">A propos de</a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#contact">Me contacter</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top"><?php echo $utilisateur['prenom'] . ' ' . $utilisateur['nom']; ?></a>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
 
-<!-- Header -->
-<header>
-<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png/jpg"></div>
-<?php 
-$sql = $pdoCV -> query("SELECT * FROM utilisateur");
-$utilisateur = $sql -> fetch();
-        ?>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Compétences</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#experiences">Experiences</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">A propos de</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Me contacter</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
+        <header>
+            <?php 
+            $sql = $pdoCV -> query("SELECT * FROM utilisateur");
+            $utilisateur = $sql -> fetch();
+            ?>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -124,74 +124,77 @@ $utilisateur = $sql -> fetch();
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </header>
+    </div>
 
-        <!-- Portfolio Grid Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Compétences</h2>
-                        <hr class="star-light">
-                        <span class="skills">
-                           <label for="bar">HTML</label>
-                            <div class="progress">
-                              <div class="progress-bar-danger" role="progressbar"
-                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
-                              </div>
-                            </div>
-                            <label for="bar">CSS</label>
-                            <div class="progress">
-                              <div class="progress-bar-danger" role="progressbar"
-                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
-                              </div>
-                            </div>
-                            <label for="bar">PHP</label>
-                            <div class="progress">
-                              <div class="progress-bar-danger" role="progressbar"
-                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
-                              </div>
-                            </div>
-                            <label for="bar">Javascript</label>
-                            <div class="progress">
-                              <div class="progress-bar-danger" role="progressbar"
-                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
-                              </div>
-                            </div>
-                            <label for="bar">Bootstrap</label>
-                            <div class="progress">
-                              <div class="progress-bar-danger" role="progressbar"
-                              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
-                              </div>
-                            </div>
-                       </span>
-                   </div>
-               </div>
-           </div>
-       </section>
-       <!-- Experiences section -->
-       <section id="experiences" class="success">
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Expériences</h2>
+                    <h2>Compétences</h2>
                     <hr class="star-light">
                     <span class="skills">
-                        <?php $i = 0;
-                        while ($i < count($t_experiences)) {
-                           if ($i > 0) {}
-                           echo '<div class="col-md-3"><p><b>'. $t_experiences[$i]['titre_e'] . ' </b></p> ' . '<p>' . $t_experiences[$i]['sous_titre_e'] . ' </p> ' . '<p><b>' . $t_experiences[$i]['dates_e'] . ' </b></p> ' . '<p>' .  $t_experiences[$i]['description_e']  . '</p><hr/></div>';
-                           $i++;
-                       } 
-                       ?>
-                   </span>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- About Section -->
-   <section id="about">
+                     <label for="bar">HTML</label>
+                     <div class="progress">
+                      <div class="progress-bar-danger" role="progressbar"
+                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
+                  </div>
+              </div>
+              <label for="bar">CSS</label>
+              <div class="progress">
+                  <div class="progress-bar-danger" role="progressbar"
+                  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
+              </div>
+          </div>
+          <label for="bar">PHP</label>
+          <div class="progress">
+              <div class="progress-bar-danger" role="progressbar"
+              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
+          </div>
+      </div>
+      <label for="bar">Javascript</label>
+      <div class="progress">
+          <div class="progress-bar-danger" role="progressbar"
+          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
+      </div>
+  </div>
+  <label for="bar">Bootstrap</label>
+  <div class="progress">
+      <div class="progress-bar-danger" role="progressbar"
+      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
+  </div>
+</div>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experiences section -->
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
+ <section id="experiences" class="success">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Expériences</h2>
+                <hr class="star-light">
+                <span class="skills">
+                    <?php $i = 0;
+                    while ($i < count($t_experiences)) {
+                     if ($i == 0) {}
+                         echo '<div class="col-md-3"><p><h3>'. $t_experiences[$i]['titre_e'] . ' </h3></p><hr/><p>' . $t_experiences[$i]['sous_titre_e'] . ' </p><p>' . $t_experiences[$i]['dates_e'] . ' </p><p><b>' .  $t_experiences[$i]['description_e']  . '</b></p></div>';
+                     $i++;
+                 } 
+                 ?>
+             </span>
+         </div>
+     </div>
+ </div>
+</section>
+</div>
+<!-- About Section -->
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -203,6 +206,13 @@ $utilisateur = $sql -> fetch();
             <div class="col-lg-12 ">
                 <p><?php echo 'Je m\'appelle '. $utilisateur['prenom'] . ' ' . $utilisateur['nom'] . ', ' . 'J\'ai' . ' ' . $utilisateur['age'] . ' ans et je suis ' . ' ' . $t_titre[0]['titre_cv'] . ' .' ;?></p>
             </div>
+            <div class="cv-web">
+                <div class="button">
+                    <a target="_blank" href="img/cv_id.pdf">Télécharger</a>
+                    <p class="top">Mon CV print en PDF</p>
+                    <p class="bottom">Taille: 22,4 Ko</p>
+                </div>
+            </div>
             <div class="col-lg-4">
                 <p></p>
             </div>
@@ -211,60 +221,63 @@ $utilisateur = $sql -> fetch();
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="success">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Me contacter</h2>
-                <hr class="star-light">
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
+    <section id="contact" class="success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Me contacter</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <div id="formulaire">
+                        <form name="sentMessage" id="contactForm" novalidate>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Nom</label>
+                                    <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Adresse mail</label>
+                                    <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Numéro de téléphone</label>
+                                    <input type="tel" class="form-control" placeholder="06/07........" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Message</label>
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="sentMessage" id="contactForm" novalidate>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nom</label>
-                            <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Adresse mail</label>
-                            <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Numéro de téléphone</label>
-                            <input type="tel" class="form-control" placeholder="06/07........" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Message</label>
-                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                        <div class="form-group col-xs-12">
-                            <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </section>
+</div>
 <!-- Footer -->
 <footer class="text-center">
     <div class="footer-above">
@@ -548,7 +561,7 @@ $utilisateur = $sql -> fetch();
 <!-- jQuery -->
 <script src="front/vendor/jquery/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/path/to/parallax.js"></script>
+<script src="front/js/parallax.js-1.4.2/parallax.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="front/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -562,6 +575,8 @@ $utilisateur = $sql -> fetch();
 
 <!-- Theme JavaScript -->
 <script src="front/js/freelancer.min.js"></script>
+
+<script src="front/js/main.js"></script>
 
 </body>
 
