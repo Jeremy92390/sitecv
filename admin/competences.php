@@ -91,7 +91,7 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 				<div id="contenuPrincipal">
 					<div>
 						<form action="competences.php" method="post">
-							<table class="insertion" width="200px" border="1">
+							<table class="insertion" width="200px" border="6">
 								<tr>
 									<td>Compétence</td>
 									<td><textarea id="editor1" name="competence" id="competence" size="50" required></textarea></td>

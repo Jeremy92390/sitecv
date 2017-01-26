@@ -73,7 +73,7 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 				?>
 			</div>
 			<div class="text">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus debitis ducimus commodi libero esse aliquam quae autem, consectetur quaerat assumenda eius, explicabo harum est necessitatibus dicta beatae ipsum. Pariatur, fugit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, quas numquam facere optio nesciunt. Incidunt, rem sequi, distinctio natus reiciendis reprehenderit cum provident cupiditate, nulla, iusto odit libero placeat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur officia in a libero rem nam nisi, dolor amet provident praesentium, est voluptas ratione qui corrupti sint voluptates nihil magnam.</p>
+				<p></p>
 			</div>
 		</div>
 		<footer>

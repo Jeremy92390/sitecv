@@ -95,7 +95,7 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
             <div id="contenuPrincipal">
                 <div>
                     <form action="" method="post">
-                        <table class="insertion" width="200px" border="1">
+                        <table class="insertion" width="200px" border="6">
                            
 
                             <tr>
