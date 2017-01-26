@@ -48,32 +48,37 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 	
 </head>
 <body>
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-	</style>
-	<header class="main-header">
-		<div id="logo">
-			<?php require 'admin_header.php' ?>
+	<div class="parallax-window" data-parallax="scroll" data-image-src="../img/sunset.jpeg">
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+		</style>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
+		</style>
+		<header class="main-header">
+			<div id="logo">
+				<?php require 'admin_header.php' ?>
+			</div>
+		</header>
+		<div id="mainContent">
+			<h1>Espace administratif du site CV</h1>
+			
+			<sidebar>
+				<?php require 'admin_nav.php' ?>
+			</sidebar>
+			<?php require "admin_contener.php" ?>
+			<div class="contener">
+				<?php 
+				echo '<div class="">' . $ligne['nom'] . "<br><br>" . $ligne['prenom'] . "<br><br>" . $ligne['email'] . "<br><br>" . $ligne['tel'] . "<br><br>" . $ligne['age'] . "<br><br>" . $ligne['adresse'] . "<br><br>" . $ligne['code_postale'] . "<br><br>" . $ligne['ville'] . "<br><br>" . $ligne['pays'] . '<br><br></div>';
+				?>
+			</div>
+			<div class="text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus debitis ducimus commodi libero esse aliquam quae autem, consectetur quaerat assumenda eius, explicabo harum est necessitatibus dicta beatae ipsum. Pariatur, fugit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, quas numquam facere optio nesciunt. Incidunt, rem sequi, distinctio natus reiciendis reprehenderit cum provident cupiditate, nulla, iusto odit libero placeat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur officia in a libero rem nam nisi, dolor amet provident praesentium, est voluptas ratione qui corrupti sint voluptates nihil magnam.</p>
+			</div>
 		</div>
-	</header>
-	<div id="mainContent">
-		<h1>Espace administratif du site CV</h1>
-		
-		<sidebar>
-			<?php require 'admin_nav.php' ?>
-		</sidebar>
-		<?php require "admin_contener.php" ?>
-		<div class="contener">
-			<?php 
-			echo '<div class="">' . $ligne['nom'] . "<br><br>" . $ligne['prenom'] . "<br><br>" . $ligne['email'] . "<br><br>" . $ligne['tel'] . "<br><br>" . $ligne['age'] . "<br><br>" . $ligne['adresse'] . "<br><br>" . $ligne['code_postale'] . "<br><br>" . $ligne['ville'] . "<br><br>" . $ligne['pays'] . '<br><br></div>';
-			?>
-		</div>
-		<div class="text">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus debitis ducimus commodi libero esse aliquam quae autem, consectetur quaerat assumenda eius, explicabo harum est necessitatibus dicta beatae ipsum. Pariatur, fugit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ipsam, quas numquam facere optio nesciunt. Incidunt, rem sequi, distinctio natus reiciendis reprehenderit cum provident cupiditate, nulla, iusto odit libero placeat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aspernatur officia in a libero rem nam nisi, dolor amet provident praesentium, est voluptas ratione qui corrupti sint voluptates nihil magnam.</p>
-		</div>
-	</div>
-	<footer>
-		<?php require 'admin_footer.php' ?>
-	</footer>	
+		<footer>
+			<?php require 'admin_footer.php' ?>
+		</footer>
+	</div>	
 </body>
 </html>

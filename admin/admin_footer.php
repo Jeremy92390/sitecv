@@ -6,3 +6,5 @@
 		<a href="www.twitter.com"><i class="fa fa-twitter-square fa-3x"></i></a>	
 	</div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../front/js/parallax.js-1.4.2/parallax.js"></script>

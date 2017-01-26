@@ -10,8 +10,6 @@
   		<li><a href="../admin/index.php">Accueil</a></li>
   		<li><a href="../admin/admin_profil.php">Profil</a></li>
   		<li><a href="../admin/competences.php">Mes compétences</a></li>
-  		<li><a href="#">Mes projets</a></li>
-  		<li><a href="../admin/experiences.php">Mes experiences</a></li>
-  		<li><a href="#">Me contacter</a></li>
+  		<li><a href="../admin/experiences.php">Mes expériences</a></li>
 	</ul>
 </nav>

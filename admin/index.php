@@ -34,24 +34,28 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 			
 		
  ?>
-
-		<h1>Espace administratif du site CV</h1>
-		<div class="bienvenue">
-			<?php
-			echo '<div class="">Bonjour ' . $ligne['prenom'] . " " . $ligne['nom'] . '<br><img src="../img/" alt=""></div>';
-			?>
-		</div>
-		<sidebar>
-			<?php require 'admin_nav.php' ?>
-		</sidebar>
-		<?php require "admin_contener.php" ?>
-		<div class="contener">
-			<?php 
-			echo '<div class="">' . $ligne['nom'] . "<br><br>" . $ligne['prenom'] . "<br><br>" . $ligne['email'] . "<br><br>" . $ligne['tel'] . "<br><br>" . $ligne['age'] . "<br><br>" . $ligne['adresse'] . "<br><br>" . $ligne['code_postale'] . "<br><br>" . $ligne['ville'] . "<br><br>" . $ligne['pays'] . '<br><br></div>';
-			?>
-	</div>
-	<footer>
-		<?php require 'admin_footer.php' ?>
-	</footer>	
-</body>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
+	</style>
+		<div class="parallax-window" data-parallax="scroll" data-image-src="../img/sunset.jpeg">
+			<h1>Espace administratif du site CV</h1>
+			<div class="bienvenue">
+					<?php
+					echo '<div class="">Bonjour ' . $ligne['prenom'] . " " . $ligne['nom'] . '<br><img src="../img/" alt=""></div>';
+					?>
+				</div>
+				<sidebar>
+					<?php require 'admin_nav.php' ?>
+				</sidebar>
+				<?php require "admin_contener.php" ?>
+				<div class="contener">
+					<?php 
+					echo '<div class="">' . $ligne['nom'] . "<br><br>" . $ligne['prenom'] . "<br><br>" . $ligne['email'] . "<br><br>" . $ligne['tel'] . "<br><br>" . $ligne['age'] . "<br><br>" . $ligne['adresse'] . "<br><br>" . $ligne['code_postale'] . "<br><br>" . $ligne['ville'] . "<br><br>" . $ligne['pays'] . '<br><br></div>';
+					?>
+			</div>
+			<footer>
+				<?php require 'admin_footer.php' ?>
+			</footer>
+		</div>		
+	</body>
 </html>

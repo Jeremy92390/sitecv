@@ -31,28 +31,30 @@ if(isset($_POST['connexion'])){ // on envoie le formulaire avec le name du boutt
 
  ?>
 
-<?php require_once('admin_header.php'); ?>
 
-<?php require "admin_contener.php" ?>		
+<div class="parallax-window" data-parallax="scroll" data-image-src="../img/sunset.jpeg">
+	<?php require_once('admin_header.php'); ?>
+
+	<?php require "admin_contener.php" ?>		
 		
-<div id="contenuPrincipal">
-	<p>Bienvenue</p>
-	<form action="" method="POST" id="VOIR">
-		<fieldset>
-			<legend>
-				Je m'identifie
-				<?php //echo "<br>".$msg_connexion_err; ?>
-				<?php //echo "<br>".$msg_connexion_ok; ?>
-			</legend>
-			<label for="email">Email : </label>
-			<input name="email" type="email" required id="email" placeholder="rentrez votre email" tabindex="1" size="35" aria-required="true"><br>
-			<label for="mdp">Mot de passe : </label>
-			<input name="mdp" type="password" required tabindex="2" size="10" maxlength="10">
-		</fieldset>
-		<input type="reset" tabindex="3" value="Effacer">
-		<input name="connexion" type="submit" tabindex="4" value="Me connecter">
-	</form>
+		<div id="contenuPrincipal">
+			<p>Bienvenue</p>
+			<form action="" method="POST" id="VOIR">
+				<fieldset>
+					<legend>
+						Je m'identifie
+						<?php //echo "<br>".$msg_connexion_err; ?>
+						<?php //echo "<br>".$msg_connexion_ok; ?>
+					</legend>
+					<label for="email">Email : </label>
+					<input name="email" type="email" required id="email" placeholder="rentrez votre email" tabindex="1" size="35" aria-required="true"><br>
+					<label for="mdp">Mot de passe : </label>
+					<input name="mdp" type="password" required tabindex="2" size="10" maxlength="10">
+				</fieldset>
+				<input type="reset" tabindex="3" value="Effacer">
+				<input name="connexion" type="submit" tabindex="4" value="Me connecter">
+			</form>
+		</div>
 </div>
-
 
 <?php require_once ('admin_footer.php'); ?>

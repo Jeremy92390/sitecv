@@ -68,66 +68,68 @@ if (isset($_GET['deconnect'])) { // on vide les variables de session
 		
 	</head>
 	<body>
-		<style>
-			@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-		</style>
-		<header class="main-header">
-			<div id="logo">
-				<?php require 'admin_header.php' ?>
-			</div>
-		</header>
-		<div id="mainContent">
-			<h1>Espace administratif du site CV</h1>
-			<div class="bienvenue">
-				<?php
-				echo '<div class="">Bonjour ' . $ligne['prenom'] . " " . $ligne['nom'] . '<br><img src="../img/" alt=""></div>';
-				?>
-			</div>
-			<sidebar>
-				<?php require 'admin_nav.php'; ?>
-			</sidebar>
+		<div class="parallax-window" data-parallax="scroll" data-image-src="../img/sunset.jpeg">
+				<style>
+					@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+				</style>
+				<style>
+					@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
+				</style>
+				<header class="main-header">
+					<div id="logo">
+						<?php require 'admin_header.php' ?>
+					</div>
+				</header>
+				<div id="mainContent">
+					<h1>Espace administratif du site CV</h1>
+					<div class="bienvenue">
+					</div>
+					<sidebar>
+						<?php require 'admin_nav.php'; ?>
+					</sidebar>
+				</div>
+				<div id="contenuPrincipal">
+					<div>
+						<form action="competences.php" method="post">
+							<table class="insertion" width="200px" border="1">
+								<tr>
+									<td>Compétence</td>
+									<td><textarea id="editor1" name="competence" id="competence" size="50" required></textarea></td>
+								</tr><br>
+								<!-- <script>CKEDITOR.replace( 'editor1' ); </script> -->
+								
+								<tr>
+									<td>Niveau</td>
+									<td><input type="text" name="niveau_c" id="niveau" size="50"></td><br>
+								</tr><br>
+								
+								<tr>
+									<td colspan="2"><input type="submit" name="Insérer données"></td>
+								</tr>
+							</table>
+						</form><br><br>
+						<table id="competences" border="2" cellpadding="15" width="500">
+							<caption class="title">Les compétences</caption>
+							<thead>
+								<th>Compétences</th>
+								<th>Niveaux</th>
+								<th>Modifier</th>
+								<th>Supprimer</th>
+							</thead>
+							<tr>
+								<?php $sql = $pdoCV->query("SELECT * FROM t_competences");
+								//$ligne = $sql->fetch(); !! Fetch: réserve ou supprime une donnée du jeu de données !!
+								 while ($ligne = $sql->fetch()) { ?>
+								<td><?php echo $ligne['competence']; ?></td>
+								<td><?php echo $ligne['niveau_c']; ?></td>	
+								<td><a href="modifications_competences.php?id_competence=<?php echo $ligne['id_competence']; ?>">modifier</a></td>			
+								<td><a href="competences.php?id_competence=<?php echo $ligne['id_competence']; ?>">supprimer</a></td>			
+							</tr> 
+							<?php } ?>
+						</table>
+					</div>
+				</div>
+			<?php require_once ('admin_footer.php'); ?>
 		</div>
-		<div id="contenuPrincipal">
-			<div>
-				<form action="competences.php" method="post">
-					<table class="insertion" width="200px" border="1">
-						<tr>
-							<td>Compétence</td>
-							<td><textarea id="editor1" name="competence" id="competence" size="50" required></textarea></td>
-						</tr><br>
-						<!-- <script>CKEDITOR.replace( 'editor1' ); </script> -->
-						
-						<tr>
-							<td>Niveau</td>
-							<td><input type="text" name="niveau_c" id="niveau" size="50"></td><br>
-						</tr><br>
-						
-						<tr>
-							<td colspan="2"><input type="submit" name="Insérer données"></td>
-						</tr>
-					</table>
-				</form><br><br>
-				<table id="competences" border="2" cellpadding="15" width="500">
-					<caption class="title">Les Compétences</caption>
-					<thead>
-						<th>Compétences</th>
-						<th>Niveaux</th>
-						<th>Modifier</th>
-						<th>Supprimer</th>
-					</thead>
-					<tr>
-						<?php $sql = $pdoCV->query("SELECT * FROM t_competences");
-						//$ligne = $sql->fetch(); !! Fetch: réserve ou supprime une donnée du jeu de données !!
-						 while ($ligne = $sql->fetch()) { ?>
-						<td><?php echo $ligne['competence']; ?></td>
-						<td><?php echo $ligne['niveau_c']; ?></td>	
-						<td><a href="modifications_competences.php?id_competence=<?php echo $ligne['id_competence']; ?>">modifier</a></td>			
-						<td><a href="competences.php?id_competence=<?php echo $ligne['id_competence']; ?>">supprimer</a></td>			
-					</tr> 
-					<?php } ?>
-				</table>
-			</div>
-		</div>
-		<?php require_once ('admin_footer.php'); ?>
 	</body>
 </html>
