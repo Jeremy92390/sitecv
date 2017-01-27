@@ -226,6 +226,10 @@ input::-moz-placeholder {
     line-height: 35px;
 }
 
+/* FIN DU BUTTON */
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 250px) and (max-width: 290px) {
   #experiences {
     width: 256px;
@@ -235,12 +239,16 @@ input::-moz-placeholder {
   }
   header .intro-text .skills {
     font-size: 1em;
-}
+  }
 
-#portfolio h2 {
+  #portfolio h2 {
     font-size: 2em;
     margin: 0;
-}
+  }
+  
+  .titrepro {
+    display: hidden;
+  }
 
 }
 
@@ -248,5 +256,3 @@ section h2 {
     margin: 0;
     font-size: 2em;
 }
-
-/* Fin de button */

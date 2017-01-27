@@ -97,9 +97,6 @@ $t_titre = $sql -> fetchAll();
                     <li class="page-scroll">
                         <a href="#about">A propos de</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Me contacter</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -120,7 +117,7 @@ $t_titre = $sql -> fetchAll();
                         <div class="intro-text">
                             <span class="name"><?php echo $utilisateur['prenom']. ' ' . $utilisateur['nom']; ?></span>
                             <hr class="star-light1">
-                            <span class="skills"><?php echo $t_titre[0]['titre_cv']; ?></span>
+                            <span class="titrepro"><?php echo $t_titre[0]['titre_cv']; ?></span>
                         </div>
                     </div>
                 </div>
@@ -220,76 +217,18 @@ $t_titre = $sql -> fetchAll();
     </div>
 </section>
 
-<!-- Contact Section -->
-<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
-    <section id="contact" class="success">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Me contacter</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <div id="formulaire">
-                        <form name="sentMessage" id="contactForm" novalidate>
-                            <div class="row control-group">
-                                <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Nom</label>
-                                    <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Veuillez entrer votre nom.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
-                                <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Adresse mail</label>
-                                    <input type="email" class="form-control" placeholder="Adresse email" id="email" required data-validation-required-message="Veuillez entrer votre adresse mail.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
-                                <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Numéro de téléphone</label>
-                                    <input type="tel" class="form-control" placeholder="06/07........" id="phone" required data-validation-required-message="Veuillez entrer votre numéro de téléphone.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
-                                <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>Message</label>
-                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Veuillez entrer un message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <br>
-                            <div id="success"></div>
-                            <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
 <!-- Footer -->
 <footer class="text-center">
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-6">
                     <h3>Ou me trouver?</h3>
                     <p><?php echo $utilisateur['adresse']; ?></p> 
                     <p><?php echo $utilisateur['code_postale']. ' ' . $utilisateur['ville']; ?></p>                                           
                     <p><?php echo $utilisateur['email']; ?></p>                                           
                 </div>
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-6">
                     <h3>Réseaux Sociaux</h3>
                     <ul class="list-inline">
                         <li>
@@ -308,10 +247,6 @@ $t_titre = $sql -> fetchAll();
                             <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                         </li>
                     </ul>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>A propos du freelance</h3>
-                    <p>Freelance est un libre d'utiliser, open source Bootstrap thème créé par <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                 </div>
             </div>
         </div>
