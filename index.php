@@ -92,10 +92,10 @@ $t_titre = $sql -> fetchAll();
                         <a href="#portfolio">Compétences</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#experiences">Experiences</a>
+                        <a href="#experiences">Expériences</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">A propos de</a>
+                        <a href="#about">à propos de</a>
                     </li>
                 </ul>
             </div>
