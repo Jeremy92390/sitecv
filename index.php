@@ -41,8 +41,8 @@ $t_titre = $sql -> fetchAll();
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description">
+        <meta name="author">
 
         <title>Jérémy Telga CV</title>
 
@@ -133,36 +133,36 @@ $t_titre = $sql -> fetchAll();
                     <h2>Compétences</h2>
                     <hr class="star-light">
                     <span class="skills">
-                     <label for="bar">HTML</label>
-                     <div class="progress">
+                       <label for="bar">HTML</label>
+                       <div class="progress">
+                          <div class="progress-bar-danger" role="progressbar"
+                          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
+                      </div>
+                  </div>
+                  <label for="bar">CSS</label>
+                  <div class="progress">
                       <div class="progress-bar-danger" role="progressbar"
-                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
+                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
                   </div>
               </div>
-              <label for="bar">CSS</label>
+              <label for="bar">PHP</label>
               <div class="progress">
                   <div class="progress-bar-danger" role="progressbar"
-                  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
+                  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
               </div>
           </div>
-          <label for="bar">PHP</label>
+          <label for="bar">Javascript</label>
           <div class="progress">
               <div class="progress-bar-danger" role="progressbar"
-              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
+              aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
           </div>
       </div>
-      <label for="bar">Javascript</label>
+      <label for="bar">Bootstrap</label>
       <div class="progress">
           <div class="progress-bar-danger" role="progressbar"
-          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
+          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
       </div>
   </div>
-  <label for="bar">Bootstrap</label>
-  <div class="progress">
-      <div class="progress-bar-danger" role="progressbar"
-      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
-  </div>
-</div>
 </span>
 </div>
 </div>
@@ -227,6 +227,7 @@ $t_titre = $sql -> fetchAll();
                     <p><?php echo $utilisateur['adresse']; ?></p> 
                     <p><?php echo $utilisateur['code_postale']. ' ' . $utilisateur['ville']; ?></p>                                           
                     <p><?php echo $utilisateur['email']; ?></p>                                           
+                    <p><?php echo $utilisateur['tel']; ?></p>                                           
                 </div>
                 <div class="footer-col col-md-6">
                     <h3>Réseaux Sociaux</h3>
@@ -235,18 +236,11 @@ $t_titre = $sql -> fetchAll();
                             <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            <a href="https://www.instagram.com/jeremet_ca/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -255,7 +249,7 @@ $t_titre = $sql -> fetchAll();
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; TelgaCorp 2017
+                    Copyright &copy; 2017
                 </div>
             </div>
         </div>
