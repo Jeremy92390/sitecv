@@ -216,6 +216,23 @@ $t_titre = $sql -> fetchAll();
         </div>
     </div>
 </section>
+<section id="interet">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Mes centres d'intérêts</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ">
+                <p>Je suis un passionné de sport de combat, j'ai pratiqué auparavant du karaté, de la boxe thaïlandaise et de la boxe anglaise.</p>
+                <p>J'aime également le footbal, le volley-ball et autres sports d'équipe.</p>
+                <p>Pour finir, je suis également un addict de la musique avec des goûts musicaux assez varié allant du jazz au rap en passant par de la musique classique.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="text-center">
