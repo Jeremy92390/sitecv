@@ -81,6 +81,7 @@ $t_titre = $sql -> fetchAll();
                 </button>
                 <a class="navbar-brand" href="#page-top"><?php echo $utilisateur['prenom'] . ' ' . $utilisateur['nom']; ?></a>
             </div>
+            <img src="img/LOGO.png" alt="JT" class="LOGO">
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -97,6 +98,9 @@ $t_titre = $sql -> fetchAll();
                     <li class="page-scroll">
                         <a href="#about">à propos de</a>
                     </li>
+                    <li class="page-scroll">
+                        <a href="#interet">Centres d'intérêts</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -105,7 +109,7 @@ $t_titre = $sql -> fetchAll();
     </nav>
 
     <!-- Header -->
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/desert1280.jpg">
         <header>
             <?php 
             $sql = $pdoCV -> query("SELECT * FROM utilisateur");
@@ -135,31 +139,30 @@ $t_titre = $sql -> fetchAll();
                     <span class="skills">
                        <label for="bar">HTML</label>
                        <div class="progress">
-                          <div class="progress-bar-danger" role="progressbar"
-                          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%">95%
+                          <div class="progress-bar-info" role="progressbar"aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:95%"><p class="niveau">95%</p>
                       </div>
                   </div>
                   <label for="bar">CSS</label>
                   <div class="progress">
-                      <div class="progress-bar-danger" role="progressbar"
+                      <div class="progress-bar-info" role="progressbar"
                       aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%
                   </div>
               </div>
               <label for="bar">PHP</label>
               <div class="progress">
-                  <div class="progress-bar-danger" role="progressbar"
+                  <div class="progress-bar-info" role="progressbar"
                   aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:65%">65%
               </div>
           </div>
           <label for="bar">Javascript</label>
           <div class="progress">
-              <div class="progress-bar-danger" role="progressbar"
+              <div class="progress-bar-info" role="progressbar"
               aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:55%">55%
           </div>
       </div>
       <label for="bar">Bootstrap</label>
       <div class="progress">
-          <div class="progress-bar-danger" role="progressbar"
+          <div class="progress-bar-info" role="progressbar"
           aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">80%
       </div>
   </div>
@@ -169,7 +172,7 @@ $t_titre = $sql -> fetchAll();
 </div>
 </section>
 <!-- Experiences section -->
-<div class="parallax-window" data-parallax="scroll" data-image-src="img/red.png">
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/desert1280.jpg">
  <section id="experiences" class="success">
     <div class="container">
         <div class="row">
@@ -205,9 +208,9 @@ $t_titre = $sql -> fetchAll();
             </div>
             <div class="cv-web">
                 <div class="button">
-                    <a target="_blank" href="img/cv_id.pdf">Télécharger</a>
+                    <a target="_blank" href="img/id_cv2.pdf">Télécharger</a>
                     <p class="top">Mon CV print en PDF</p>
-                    <p class="bottom">Taille: 22,4 Ko</p>
+                    <p class="bottom">Taille: 22,4 Ko</p>
                 </div>
             </div>
             <div class="col-lg-4">

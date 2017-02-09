@@ -1,3 +1,3 @@
 // Parallax 
 
-$('.parallax-window').parallax({imageSrc: 'img/red.png'});
+$('.parallax-window').parallax({imageSrc: 'img/desert1280.jpg'});
